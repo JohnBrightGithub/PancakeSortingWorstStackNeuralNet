@@ -22,7 +22,7 @@ from Common.cleanDuplicates import setPrintDiff
 import sys
 import argparse
 
-from OneStepData.OneStepDataLoader import loadGetEstimatesNextStates
+from Common.DataLoader import loadGetEstimatesNextStates
 
 model = tf.keras.models.load_model("Models\\worstPancakeStackV2.keras")
 import os

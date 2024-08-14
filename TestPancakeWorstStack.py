@@ -79,7 +79,6 @@ if __name__ == '__main__':
         retArr = getInputPrevState(arr1, arr2)
         nextMoveArr = np.array(model(np.expand_dims(retArr,0)))
         nextMove = nextMoveArr.argmax()
-        print("dist: ", dist, " nextMove ", nextMove)
         dist = (testDist-testDist2)+2
         nextMoveRandom = random.randint(0, 4)
         if nextMove==dist:
