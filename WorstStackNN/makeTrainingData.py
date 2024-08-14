@@ -11,6 +11,9 @@ def makeTrainingData(
                 nums = [18, 19, 20, 21, 22, 22, 23, 23, 24, 24, 25, 25, 26, 26, 27,27],
                 dists = [20, 22, 22, 23, 24, 25, 25, 26, 26, 27, 27, 28, 28, 29, 29, 30],
                 totalSampleds = [120, 120, 120, 120, 120, 120, 60, 60, 60, 60, 12, 12, 12, 12, 12, 60]):
+    #nums: n values to train on
+    #dists: dist values to train on
+    #totalSampleds: total number of samples to take from files with that n and dist value
     numSampled = len(nums)
     for i in range(numSampled):
         num = nums[i]

@@ -54,7 +54,6 @@ class CommandLineEstimate:
         if argument.nPlus:
             global nPlus
             nPlus = int(argument.nPlus)
-            print("set nPlus ", nPlus)
         if argument.xMoreThanN:
             global xMoreThanN
             xMoreThanN = bool(argument.xMoreThanN)

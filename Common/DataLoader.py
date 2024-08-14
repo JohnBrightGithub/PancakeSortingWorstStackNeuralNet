@@ -7,7 +7,7 @@ import os
 import os.path
 from tqdm import tqdm
 from ASearch.Ctype import getDistRange
-from OneStepData.WriteToResults import writeToResults
+from Common.WriteToResults import writeToResults
 
 maxColumns=35
 verbose = True

@@ -27,7 +27,7 @@ trainFirst = False
 
 class CommandLineTest:
     def __init__(self):
-        parser = argparse.ArgumentParser(description = "Description for my parser")
+        parser = argparse.ArgumentParser()
         parser.add_argument("-mc", "--MaxColumns", help = " max columns for neural network data (default = 35)", required = False, default = 35)
         parser.add_argument("-tf", "--TrainFirst", help = " train a new model before testing (default = False)", required = False, default = False)
         parser.add_argument("-it", "--Iterations", help = " number of iterations for the test (default = 1000)", required = False, default = 1000)
