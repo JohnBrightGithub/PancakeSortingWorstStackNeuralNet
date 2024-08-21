@@ -1,5 +1,5 @@
-# PancakeSortingWorstStackNeuralNet
-#Introduction
+# PancakeSortingWorstStackNeuralNet 
+#Introduction 
 This repo is for a neural network used to find the "worst" stacks for the pancake sorting problem described here: https://en.wikipedia.org/wiki/Pancake_sorting. By worst we mean the stack with the greatest distance from the sorted stack. 
 
 For a brief background, a pancake stack is a permutation of the numbers 1-n. The stack can be sorted by prefix flips. Ie: [1,3,2] can be flipped to become [3,1,2] or [2,3,1] only. [1,3,2] is the worst pancake stack for n=3. This is better illustrated by the picture found on the wikipedia page:
@@ -22,7 +22,7 @@ The paper proving the 15/14n bound by Mohammad H. Heydari and I. Hal Sudborough 
 
 The similar stack [1,7,5,3,6,2,4] is not mentioned in this paper, but at 4 chunks it has distance 32. Later in this readme we’ll post other stacks of length 28 with distance 32, as well as stacks with length 26 and distance 30.
 
-#Neural Network
+#Neural Network 
 Data fed into the neural network is as follows:
 We take a stack with known distance of length n, then create a new stack by
 appending {n+1} on to the end.
@@ -114,7 +114,7 @@ The two stacks are also turned into 0-1 matrices with 35 columns and 35 rows so 
  
 Since the original stack has distance 20 and the new stack has distance 21, we give this pair the label 3.
 
-#How to Run
+#How to Run 
 The first script to run is the training and testing script, type:
 
 ```
@@ -176,7 +176,7 @@ The results will be put into BruteForce\\testchunksMixed.txt
 
 Both commands check the distance using all permutations of size 7 with 0 adjacencies (or the two permutations of size 5 with no adjacencies)
 
-#Results
+#Results 
 The following 18 stacks of length 28 and dist 32 have been found using the getEstimates on n=27, dist=30
 
 1 3 7 5 2 6 4 8 14 11 13 10 12 9 15 23 21 18 20 17 19 22 16 24 26 28 25 27  
