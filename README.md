@@ -15,14 +15,14 @@ An efficient flip is one that increases the number of adjacencies and a waste is
 Since a flip can at most add 1 adjacency, the distance of any stack is at least n-#of adjacencies
 
 
-#Prior work
+# Prior work
 There has been much work in finding bounds for the distance of the worst stack for a given value of n.  Bill Gates and Christos Papadimitriou gave the first lower bound of 17/16n. This was done by creating “chunks” of length 7. The chunks are created starting with the stack [1,7,5,3,6,4,2] and for the next chunk we add 7 to each entry. This makes the stack with 2 chunks: [1,7,5,3,6,4,2,8,14,12,10,13,11,9] Then it is proven that for every 16 elements that one waste flip must be performed. The current best known bounds are 15/14 n and 18/11 n. 
 
 The paper proving the 15/14n bound by Mohammad H. Heydari and I. Hal Sudborough uses the same idea and the same stack, but proves that every 14 elements requires a waste flip. In the paper they mention that 4 chunks [1,7,5,3,6,4,2] has distance 31. They conjecture that the stack made of these chunks has a lower bound of 8/7n-1.
 
 The similar stack [1,7,5,3,6,2,4] is not mentioned in this paper, but at 4 chunks it has distance 32. Later in this readme we’ll post other stacks of length 28 with distance 32, as well as stacks with length 26 and distance 30.
 
-#Neural Network 
+# Neural Network 
 Data fed into the neural network is as follows:
 We take a stack with known distance of length n, then create a new stack by
 appending {n+1} on to the end.
