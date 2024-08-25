@@ -222,7 +222,7 @@ if __name__ == "__main__":
     setPrintDiff(PrintDiff)
     for i in range(5):
         dist = origDist-2+i
-        path = "Results/"+str(n+1)+ "-"+ str(dist)
+        path = "Results/"+str(n)+ "-"+ str(dist)
         if(os.path.exists(path)):
             cleanDuplicatesFolder(path)
 
