@@ -87,7 +87,6 @@ def getTheEstimatesNext(element):
     retArr = getInputPrevState(element[1], orig)
     nextMoveArr = np.array(model(np.expand_dims(retArr,0)))
     nextMove = nextMoveArr.argmax()
-    print("nextMove ", nextMove, " nPlus ", nPlus)
     if(nextMove>=nPlus):
         return element[1]
     return None
@@ -163,7 +162,6 @@ if __name__ == "__main__":
                     print("Getting Estimates ")
                     with Pool(12) as pool: 
                         r = list(tqdm(pool.imap_unordered(getTheEstimatesNext, oneStepData), total=rows, miniters=100))
-                    print("arrs: ", r)
                     for arrs in r:
                         if(not arrs is None):
                             hardStacks.append(arrs)
@@ -212,7 +210,6 @@ if __name__ == "__main__":
                                     printStr = printStr + str(ele) + " "
                                 printStr = printStr.strip()  
                                 myfile.write(printStr + "\n")
-                                print(printStr)
                                 pbar.update(1)
                             myfile.close()
         except Exception as e:
